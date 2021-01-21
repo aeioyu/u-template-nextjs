@@ -3,7 +3,7 @@ import style from './SectionGsapScroll.module.css';
 
 function SectionGsapScroll({ children, ...props }) {
   return (
-    <section className={style.sectionGsapScroll} {...props}>
+    <section className={style.container} {...props}>
       {children}
     </section>
   );

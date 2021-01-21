@@ -1,4 +1,4 @@
-export { default as AppFooter } from './AppFooter';
-export { default as AppHeader } from './AppHeader';
+export { default as AppFooter } from './AppFooter/AppFooter';
+export { default as AppHeader } from './AppHeader/AppHeader';
+export { default as AppLayout } from './AppLayout/AppLayout';
 export { default as AppMeta } from './AppMeta';
-export { default as AppLayout } from './AppLayout';

@@ -1,0 +1,31 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  height: 56px;
+  padding: 0 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9;
+}
+
+.navigation {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+
+  > li {
+    margin: 0 16px;
+
+    > a {
+      display: block;
+      color: var(--black);
+      text-decoration: none;
+    }
+  }
+}
