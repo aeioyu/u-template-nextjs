@@ -1,11 +1,11 @@
-import SectionGsap from '@/components/SectionGsap';
-import SectionParallaxBg from '@/components/SectionParallaxBg';
 import { AppMeta, AppLayout } from '@/components/App';
+import SectionGsap from '@/components/Sections/SectionGsap';
+import SectionParallaxBg from '@/components/Sections/SectionParallaxBg';
+import SectionParallaxScroll from '@/components/Sections/SectionParallaxScroll';
+import SectionAnimationScroll from '@/components/Sections/SectionAnimationScroll';
+import SectionParallaxMouseMove from '@/components/Sections/SectionParallaxMouseMove';
+import SectionParallaxMouseMove3d from '@/components/Sections/SectionParallaxMouseMove3d';
 import configs from '@/configs/app.config';
-import SectionParallaxScroll from '@/components/SectionParallaxScroll';
-import SectionAnimationScroll from '@/components/SectionAnimationScroll';
-import SectionParallaxMouseMove from '@/components/SectionParallaxMouseMove';
-import SectionParallaxMouseMove3d from '@/components/SectionParallaxMouseMove3d';
 
 export default function Home() {
   return (

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Head from 'next/head';
 
 function AppMeta({ title, favicon, description, url, image }) {

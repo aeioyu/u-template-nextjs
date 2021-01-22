@@ -6,19 +6,30 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "eslint": "eslint ."
+    "eslint": "eslint .",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@emotion/react": "^11.1.4",
+    "@emotion/styled": "^11.0.0",
     "classnames": "^2.2.6",
     "gsap": "^3.6.0",
     "next": "^10.0.0",
     "normalize.css": "^8.0.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "sass": "^1.32.5"
+    "sass": "^1.32.5",
+    "styled-system": "^5.1.5"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@storybook/addon-actions": "^6.1.15",
+    "@storybook/addon-essentials": "^6.1.15",
+    "@storybook/addon-links": "^6.1.15",
+    "@storybook/react": "^6.1.15",
     "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
     "eslint": "^7.18.0",
     "eslint-config-prettier": "^7.2.0",
     "eslint-config-react-app": "^6.0.0",
