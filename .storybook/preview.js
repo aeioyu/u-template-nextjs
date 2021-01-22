@@ -8,8 +8,16 @@ export const parameters = {
 
 export const decorators = [
   (Story) => (
-    <ThemeProvider theme={theme}>
+    <div style={{ margin: '3em' }}>
       <Story />
-    </ThemeProvider>
+    </div>
   ),
 ];
+
+// export const decorators = [
+//   (Story) => (
+//     <ThemeProvider theme={theme}>
+//       <Story />
+//     </ThemeProvider>
+//   ),
+// ];

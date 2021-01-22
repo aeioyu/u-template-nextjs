@@ -40,7 +40,7 @@ function SectionGsap({ children, ...props }) {
     <section className={style.container}>
       {loading && <div className={style.loading}>Loading</div>}
 
-      <Canon textAlign="center" color="mantis" bg="mantis">
+      <Canon textAlign="center" color="mantis">
         Main Header
       </Canon>
 

@@ -23,7 +23,7 @@ const fontFamilies = {
 // breakpoints.xl = breakpoints[3];
 
 const theme = {
-  colours: colours,
+  colors: colours,
   textStyles: {
     canon: {
       as: 'h1',
