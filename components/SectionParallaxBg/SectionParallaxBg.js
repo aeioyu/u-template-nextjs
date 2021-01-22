@@ -22,13 +22,13 @@ function SectionParallaxBg({ children, ...props }) {
       scrollTrigger: {
         trigger: [bgSection.current],
         scrub: true,
-        markers: true,
+        // markers: true,
         start: 'top bottom',
       },
     });
 
     gsap.to([bgItem2.current], {
-      'background-position': `50% 200px`,
+      'background-position': `50% ${innerHeight / 2}px`,
       scrollTrigger: {
         trigger: [bgSection2.current],
         scrub: true,
@@ -37,7 +37,7 @@ function SectionParallaxBg({ children, ...props }) {
     });
 
     gsap.to([bgItem3.current], {
-      'background-position': `50% 200px`,
+      'background-position': `50% ${innerHeight / 2}px`,
       scrollTrigger: {
         trigger: [bgSection3.current],
         scrub: true,
@@ -62,7 +62,7 @@ function SectionParallaxBg({ children, ...props }) {
           ref={bgItem2}
           className={style.itemBg}
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1498050108023-c5249f4df085?fit=crop&w=1352&q=80)',
+            backgroundImage: 'url(https://images.unsplash.com/photo-1519389950473-47ba0277781c?fit=crop&w=1350&q=80)',
           }}
         />
       </div>
@@ -71,7 +71,7 @@ function SectionParallaxBg({ children, ...props }) {
           ref={bgItem3}
           className={style.itemBg}
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1498050108023-c5249f4df085?fit=crop&w=1352&q=80)',
+            backgroundImage: 'url(https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?fit=crop&w=1352&q=80)',
           }}
         />
       </div>
