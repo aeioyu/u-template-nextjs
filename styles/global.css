@@ -1,9 +1,3 @@
-:root {
-  --container-width: 1200px;
-
-  --black: #333333;
-}
-
 * {
   box-sizing: border-box;
 }

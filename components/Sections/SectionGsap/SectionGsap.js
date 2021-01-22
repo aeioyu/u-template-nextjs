@@ -1,4 +1,4 @@
-import { Canon } from '@/components/Typography/Typography';
+import { Canon } from '@/components/Typography';
 import React, { useEffect, useMemo, useState } from 'react';
 import style from './SectionGsap.module.scss';
 
@@ -39,9 +39,11 @@ function SectionGsap({ children, ...props }) {
   return (
     <section className={style.container}>
       {loading && <div className={style.loading}>Loading</div>}
-      <Canon textAlign="center" color="#ffffff">
+
+      <Canon textAlign="center" color="mantis" bg="mantis">
         Main Header
       </Canon>
+
       <div className={style.grid}>
         {images.map((img, idx) => (
           <div key={idx} className={style.gridItem}>

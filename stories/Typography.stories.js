@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
-
-import { Canon, Paragon } from '../components/Typography';
+import { Canon, Paragon } from '@/components/Typography';
 
 export default {
   title: 'Design/Typography',
@@ -9,7 +8,7 @@ export default {
 
 const Template = (args) => (
   <Fragment>
-    <Canon>Canon</Canon>
+    <Canon color="maroonFlush">Canon</Canon>
     <Paragon>Paragon</Paragon>
   </Fragment>
 );

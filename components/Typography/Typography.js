@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { space, color, typography } from 'styled-system';
+import propTypes from '@styled-system/prop-types';
 import theme from '@/configs/theme.config';
 
 const { canon, trafalgar, paragon, greatPrimer, doublePica, bodyCopy, pica, code } = theme.textStyles;
@@ -10,6 +11,12 @@ const StyledDynamicComponent = styled.div`
   ${color}
   ${typography}
 `;
+
+StyledDynamicComponent.propTypes = {
+  ...propTypes.space,
+  ...propTypes.color,
+  ...propTypes.typography,
+};
 
 export const Canon = (props) => (
   <StyledDynamicComponent {...canon} {...props}>
