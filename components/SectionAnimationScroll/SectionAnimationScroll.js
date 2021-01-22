@@ -23,7 +23,7 @@ function SectionAnimationScroll({ children, ...props }) {
     });
     tl.fromTo([elem1.current], 1, { x: 0, opacity: 0 }, { x: 300, opacity: 1 });
     tl.fromTo([elem2.current], 1, { x: 0, opacity: 0 }, { x: -300, opacity: 1 }, '-=1');
-    tl.fromTo([elem3.current], 1, { Y: 0, opacity: 0 }, { y: -100, opacity: 1 }, '-=1');
+    tl.fromTo([elem3.current], 1, { y: 0, opacity: 0 }, { y: -100, opacity: 1 }, '-=1');
   });
 
   return (

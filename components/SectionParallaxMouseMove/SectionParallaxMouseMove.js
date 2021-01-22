@@ -6,26 +6,26 @@ function SectionParallaxMouseMove({ children, ...props }) {
   const section = useRef();
   const elem1 = useRef();
   const elem2 = useRef();
-  const elem3 = useRef();
 
-  const setScreenPosition = useCallback((mouseX, mouseY) => {
-    console.log(mouseX, mouseY);
-    var cx = window.innerWidth / 2;
-    var cy = window.innerHeight / 2;
-    const dx = mouseX - cx;
-    const dy = mouseY - cy;
-    console.log({ dy });
+  const tweenFunction = useCallback((elem, mouseX, mouseY, movement) => {
+    const rect = elem.current.getBoundingClientRect();
+    // const elem2Rect = elem2.current.getBoundingClientRect();
+    // console.log({ rect });
+    var relX = mouseX - rect.left;
+    var relY = mouseY - rect.top;
 
-    const tiltx = dy / cy;
-    const tilty = -(dx / cx);
-    const radius = Math.sqrt(Math.pow(tiltx, 2) + Math.pow(tilty, 2));
-    const degree = radius * 20;
+    // console.log({ relX, relY, innerWidth: elem1.current.offsetWidth });
 
-    TweenLite.to([section.current], 1, {
-      transform: 'rotate3d(' + tiltx + ', ' + tilty + ', 0, ' + degree + 'deg)',
-      ease: Power2.easeOut,
+    TweenLite.to([elem.current], 1, {
+      x: ((relX - [elem.current.offsetWidth] / 2) / [elem.current.offsetWidth]) * movement,
+      y: ((relY - [elem.current.offsetHeight] / 2) / [elem.current.offsetHeight]) * movement,
     });
   }, []);
+
+  const setScreenPosition = useCallback((mouseX, mouseY) => {
+    tweenFunction(elem1, mouseX, mouseY, -50);
+    tweenFunction(elem2, mouseX, mouseY, -20);
+  });
 
   return (
     <section className={style.container} {...props}>
@@ -34,10 +34,10 @@ function SectionParallaxMouseMove({ children, ...props }) {
         className={style.elemList}
         onMouseMove={({ clientX: x, clientY: y }) => setScreenPosition(x, y)}
       >
-        <div ref={elem2} className={style.contentItem}>
+        <div ref={elem1} className={style.contentItem}>
           ELEM 2
         </div>
-        <div ref={elem3} className={style.bgItem}></div>
+        <div ref={elem2} className={style.bgItem}></div>
       </div>
     </section>
   );

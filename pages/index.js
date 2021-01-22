@@ -5,6 +5,7 @@ import configs from '@/configs/app.config';
 import SectionParallaxScroll from '@/components/SectionParallaxScroll';
 import SectionAnimationScroll from '@/components/SectionAnimationScroll';
 import SectionParallaxMouseMove from '@/components/SectionParallaxMouseMove';
+import SectionParallaxMouseMove3d from '@/components/SectionParallaxMouseMove3d';
 
 export default function Home() {
   return (
@@ -17,8 +18,9 @@ export default function Home() {
         image={configs.image}
       />
       <SectionGsap id="Home" />
-      <SectionParallaxMouseMove />
-      <SectionParallaxBg id="About" />
+      <SectionParallaxMouseMove id="About" />
+      <SectionParallaxMouseMove3d />
+      <SectionParallaxBg id="Product" />
       <SectionParallaxScroll id="Service" />
       <SectionAnimationScroll id="Contact" />
     </AppLayout>

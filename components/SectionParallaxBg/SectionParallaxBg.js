@@ -13,12 +13,12 @@ function SectionParallaxBg({ children, ...props }) {
   const bgItem3 = useRef();
 
   useEffect(() => {
-    gsap.set([bgItem.current], { 'background-position': `50% ${-window.innerHeight / 2}px` });
-    gsap.set([bgItem2.current], { 'background-position': `50% ${-window.innerHeight / 2}px` });
-    gsap.set([bgItem3.current], { 'background-position': `50% ${-window.innerHeight / 2}px` });
-
+    gsap.set([bgItem.current], { 'background-position': `50% ${-[bgSection.current.clientHeight] / 2}px` });
+    gsap.set([bgItem2.current], { 'background-position': `50% ${-[bgSection2.current.clientHeight] / 2}px` });
+    gsap.set([bgItem3.current], { 'background-position': `50% ${-[bgSection3.current.clientHeight] / 2}px` });
+    console.log([bgSection.current.clientHeight]);
     gsap.to([bgItem.current], {
-      'background-position': `50% ${window.innerHeight / 2}px`,
+      'background-position': `50% ${[bgSection.current.clientHeight] / 6}px`,
       scrollTrigger: {
         trigger: [bgSection.current],
         scrub: true,
@@ -28,7 +28,7 @@ function SectionParallaxBg({ children, ...props }) {
     });
 
     gsap.to([bgItem2.current], {
-      'background-position': `50% ${window.innerHeight / 2}px`,
+      'background-position': `50% ${[bgSection2.current.clientHeight] / 6}px`,
       scrollTrigger: {
         trigger: [bgSection2.current],
         scrub: true,
@@ -37,7 +37,7 @@ function SectionParallaxBg({ children, ...props }) {
     });
 
     gsap.to([bgItem3.current], {
-      'background-position': `50% ${window.innerHeight / 2}px`,
+      'background-position': `50% ${[bgSection3.current.clientHeight] / 6}px`,
       scrollTrigger: {
         trigger: [bgSection3.current],
         scrub: true,

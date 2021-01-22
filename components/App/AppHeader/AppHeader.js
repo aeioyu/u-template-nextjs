@@ -6,7 +6,7 @@ function AppHeader() {
   const onLinkClick = useCallback((e) => {
     e.preventDefault();
     gsap.to(window, { duration: 1, scrollTo: e.target.getAttribute('href') });
-  });
+  }, []);
 
   return (
     <header className={style.header}>
@@ -21,6 +21,11 @@ function AppHeader() {
           <li>
             <a href="#About" onClick={onLinkClick}>
               About
+            </a>
+          </li>
+          <li>
+            <a href="#Product" onClick={onLinkClick}>
+              Product
             </a>
           </li>
           <li>
