@@ -1,11 +1,12 @@
 {
-  "name": "learn-starter",
+  "name": "u-next-onepage",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "eslint": "eslint ."
   },
   "dependencies": {
     "classnames": "^2.2.6",
@@ -16,5 +17,17 @@
     "react-dom": "17.0.1",
     "react-spring": "^8.0.27",
     "sass": "^1.32.5"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.18.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0"
   }
 }
