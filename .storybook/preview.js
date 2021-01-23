@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from '@emotion/react';
-import theme from '../configs/theme.config';
+import theme from '@/configs/theme.config';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -8,16 +8,8 @@ export const parameters = {
 
 export const decorators = [
   (Story) => (
-    <div style={{ margin: '3em' }}>
+    <ThemeProvider theme={theme}>
       <Story />
-    </div>
+    </ThemeProvider>
   ),
 ];
-
-// export const decorators = [
-//   (Story) => (
-//     <ThemeProvider theme={theme}>
-//       <Story />
-//     </ThemeProvider>
-//   ),
-// ];

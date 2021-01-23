@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { space, color, typography } from 'styled-system';
-import propTypes from '@styled-system/prop-types';
 import theme from '@/configs/theme.config';
 
-const { canon, trafalgar, paragon, greatPrimer, doublePica, bodyCopy, pica, code } = theme.textStyles;
+const { heading1, heading2, heading3, heading4, heading5, subHeading, body, caption } = theme.textStyles;
 
 const StyledDynamicComponent = styled.div`
   ${space}
@@ -12,56 +11,53 @@ const StyledDynamicComponent = styled.div`
   ${typography}
 `;
 
-StyledDynamicComponent.propTypes = {
-  ...propTypes.space,
-  ...propTypes.color,
-  ...propTypes.typography,
-};
-
-export const Canon = (props) => (
-  <StyledDynamicComponent {...canon} {...props}>
+/**
+ * Design guide for Typography component.
+ */
+export const Heading1 = (props) => (
+  <StyledDynamicComponent {...heading1} {...props}>
     {props.children}
   </StyledDynamicComponent>
 );
 
-export const Trafalgar = (props) => (
-  <StyledDynamicComponent {...trafalgar} {...props}>
+export const Heading2 = (props) => (
+  <StyledDynamicComponent {...heading2} {...props}>
     {props.children}
   </StyledDynamicComponent>
 );
 
-export const Paragon = (props) => (
-  <StyledDynamicComponent {...paragon} {...props}>
+export const Heading3 = (props) => (
+  <StyledDynamicComponent {...heading3} {...props}>
     {props.children}
   </StyledDynamicComponent>
 );
 
-export const GreatPrimer = (props) => (
-  <StyledDynamicComponent {...greatPrimer} {...props}>
+export const Heading4 = (props) => (
+  <StyledDynamicComponent {...heading4} {...props}>
     {props.children}
   </StyledDynamicComponent>
 );
 
-export const DoublePica = (props) => (
-  <StyledDynamicComponent {...doublePica} {...props}>
+export const Heading5 = (props) => (
+  <StyledDynamicComponent {...heading5} {...props}>
     {props.children}
   </StyledDynamicComponent>
 );
 
-export const BodyCopy = (props) => (
-  <StyledDynamicComponent {...bodyCopy} {...props}>
+export const SubHeading = (props) => (
+  <StyledDynamicComponent {...subHeading} {...props}>
     {props.children}
   </StyledDynamicComponent>
 );
 
-export const Pica = (props) => (
-  <StyledDynamicComponent {...pica} {...props}>
+export const Body = (props) => (
+  <StyledDynamicComponent {...body} {...props}>
     {props.children}
   </StyledDynamicComponent>
 );
 
-export const Code = (props) => (
-  <StyledDynamicComponent {...code} {...props}>
+export const Caption = (props) => (
+  <StyledDynamicComponent {...caption} {...props}>
     {props.children}
   </StyledDynamicComponent>
 );

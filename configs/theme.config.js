@@ -1,5 +1,5 @@
 // http://chir.ag/projects/name-that-color/
-const colours = {
+const colors = {
   bostonBlue: '#428bca',
   stTropaz: '#2a6496',
   maroonFlush: '#c7254e',
@@ -10,77 +10,58 @@ const colours = {
 
 const fontFamilies = {
   heading: 'Poppins, Helvetica, Arial, sans-serif',
-  body: 'PT Serif, Helvetica, Arial, sans-serif',
-  code: 'Roboto Mono, monospace',
+  body: 'sans-serif',
 };
 
-// const breakpoints = ['40em', '52em', '64em', '80em'];
-
-// // aliases
-// breakpoints.sm = breakpoints[0];
-// breakpoints.md = breakpoints[1];
-// breakpoints.lg = breakpoints[2];
-// breakpoints.xl = breakpoints[3];
+const breakpoints = ['319px', '599px'];
 
 const theme = {
-  colors: colours,
+  colors,
+  breakpoints,
+  fontSizes: ['6rem', '3.75rem', '3rem', '2.125rem', '1.5rem', '1rem', '0.875rem', '0.75rem'],
   textStyles: {
-    canon: {
-      as: 'h1',
-      fontSize: [11, 12, 14],
-      fontWeight: 700,
-      lineHeight: ['32px', '36px', '56px'],
+    heading1: {
+      fontSize: [0],
+      fontWeight: 300,
+      lineHeight: '130%',
       fontFamily: fontFamilies.heading,
     },
-    trafalgar: {
-      as: 'h1',
-      fontSize: [6, 9, 12],
-      lineHeight: ['24px', '28px', '40px'],
-      fontWeight: 500,
+    heading2: {
+      fontSize: [1],
+      lineHeight: '130%',
       fontFamily: fontFamilies.heading,
     },
-    paragon: {
-      as: 'h2',
-      fontSize: [6, 8, 11],
-      fontWeight: 500,
+    heading3: {
+      fontSize: [2],
+      lineHeight: '130%',
       fontFamily: fontFamilies.heading,
-      lineHeight: ['20px', '26px', '32px'],
     },
-    doublePica: {
-      fontSize: [6, 6, 10],
-      fontWeight: 400,
+    heading4: {
+      fontSize: [3],
+      lineHeight: '130%',
       fontFamily: fontFamilies.heading,
-      lineHeight: ['24px', '24px', '30px'],
     },
-    greatPrimer: {
-      as: 'h3',
-      fontWeight: 400,
-      fontSize: [5, 5, 7],
+    heading5: {
+      fontSize: [4],
+      lineHeight: '130%',
       fontFamily: fontFamilies.heading,
-      lineHeight: ['22px', '22px', '24px'],
     },
-    bodyCopy: {
-      as: 'p',
-      fontSize: [3, 4, 5],
+    subHeading: {
+      fontSize: [5],
+      lineHeight: '140%',
       fontFamily: fontFamilies.body,
-      lineHeight: ['20px', '22px', '24px'],
     },
-    code: {
-      as: 'span',
-      px: '4px',
-      py: '2px',
-      lineHeight: '22px',
-      color: colours.maroonFlush,
-      bg: colours.softPeach,
-      borderRadius: 4,
-      fontFamily: fontFamilies.code,
+    body: {
+      fontSize: [6],
+      lineHeight: '140%',
+      fontFamily: fontFamilies.body,
     },
-    underline: {
-      textDecoration: 'underline',
+    caption: {
+      fontSize: [7],
+      lineHeight: '130%',
+      fontFamily: fontFamilies.body,
     },
   },
-  fontSizes: [12, 13, 14, 15, 16, 18, 20, 21, 22, 24, 26, 28, 32, 36, 52],
-  breakpoints: ['319px', '599px'],
 };
 
 export default theme;
