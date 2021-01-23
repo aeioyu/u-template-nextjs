@@ -40,8 +40,8 @@ function SectionGsap({ children, ...props }) {
     <section className={style.container}>
       {loading && <div className={style.loading}>Loading</div>}
 
-      <Heading1 textAlign="center" color="mantis">
-        Main Header
+      <Heading1 textAlign="center" color="softPeach">
+        Siripong.info
       </Heading1>
 
       <div className={style.grid}>
