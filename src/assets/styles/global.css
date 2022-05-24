@@ -1,0 +1,6 @@
+body {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  height: 100vh;
+  overflow: hidden;
+}

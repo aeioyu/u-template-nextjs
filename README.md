@@ -1,4 +1,3 @@
-# u-template-nextjs-onepage
+# U Template Nextjs
 
-NextJS Template for One Page Website with Gsap animation and
-Design System build with storybook.
+NextJS template for initial project
