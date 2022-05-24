@@ -14,7 +14,6 @@ import "@/assets/styles/global.css";
 import { NotificationProvider } from "@/hooks/useNotification";
 import { DialogProvider } from "@/hooks/useDialog";
 import { initSentry } from "@/libs/sentry";
-import DeepARProvider from "@/libs/deepar";
 import { DebugObserver } from "@/hooks/useDebugObserver";
 import { configs } from "@/configs/configs";
 
@@ -59,10 +58,8 @@ function MyApp({ Component, pageProps }: MyAppProps) {
             </Head>
             <NotificationProvider>
               <DialogProvider>
-                <DeepARProvider>
                   <CssBaseline />
                   {getLayout(<Component {...pageProps} />)}
-                </DeepARProvider>
               </DialogProvider>
             </NotificationProvider>
           </ThemeProvider>
